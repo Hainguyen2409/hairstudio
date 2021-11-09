@@ -38,7 +38,9 @@
 }
 
 .banner-button a {
+    position: relative;
     width: 150px;
+    height: auto;
     text-decoration: none;
     display: inline-block;
     margin: 0 10px;
@@ -46,9 +48,24 @@
     color: #fff;
     border: 1px solid #fff;
     transition: color 0.5s;
+    z-index: 1;
 }
 
 .banner-button a:hover {
     color: #000;
-    background-color: aliceblue;
+}
+
+.banner-button a span {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.banner-button a:hover span {
+    width: 100%;
 }
